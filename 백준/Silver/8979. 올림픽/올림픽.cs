@@ -32,9 +32,10 @@ foreach (var one in dict)
     }
     else
     {
-        rank[one.Key] = count +1;
+        rank[one.Key] = count;
         before = one;
     }
+    count++;
 
     if(one.Key == k)
     {
