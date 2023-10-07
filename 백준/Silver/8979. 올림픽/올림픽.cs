@@ -25,9 +25,16 @@ KeyValuePair<int,Tuple<int,int,int>> before = dict.First();
 foreach (var one in dict)
 {
     if (before.Value.Item1 == one.Value.Item1 && before.Value.Item2 == one.Value.Item2 && before.Value.Item3 == one.Value.Item3)
+    {
+        if (rank[before.Key] == 0)
+            rank[one.Key] = 1;
         rank[one.Key] = rank[before.Key];
-    else 
+    }
+    else
+    {
         rank[one.Key] = count +1;
+        before = one;
+    }
 
     if(one.Key == k)
     {
