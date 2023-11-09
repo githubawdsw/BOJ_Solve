@@ -1,4 +1,4 @@
-//BOJ_10808
+//BOJ_1987
 
 
 string[] inputrc = Console.ReadLine().Split(' ');
