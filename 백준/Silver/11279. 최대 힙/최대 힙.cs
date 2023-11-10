@@ -4,7 +4,7 @@ using System.Text;
 namespace PriorityQueue_
 {
 
-    class BOJ_2075
+    class BOJ_11279
     {
         public class Priority_Queue // 최대힙
         {

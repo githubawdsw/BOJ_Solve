@@ -1,4 +1,4 @@
-// BOJ_17140
+// BOJ_2212
 
 
 int n = int.Parse(Console.ReadLine());

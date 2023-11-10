@@ -4,7 +4,7 @@ using System.Text;
 namespace Binary_Search
 {
     
-    class BOJ_10816
+    class BOJ_18870
     {
         static StringBuilder sb = new StringBuilder();
         static void Main(string[] args)

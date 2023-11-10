@@ -4,7 +4,7 @@ using System.Text;
 namespace MathAlgorithm
 {
     
-    class BOJ_1676
+    class BOJ_4948
     {
         static void Main(string[] args)
         {

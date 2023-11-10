@@ -4,7 +4,7 @@ using System.Text;
 namespace BFS_DFS_Reculsive
 {
     
-    class PaperNumbuer_1780
+    class PaperNumbuer_2630
     {
         static int N;
         static int[,] board = new int[129, 129];

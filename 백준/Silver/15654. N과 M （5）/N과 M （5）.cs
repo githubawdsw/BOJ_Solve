@@ -2,7 +2,7 @@ using System;
 using System.Text;
 namespace Back_Tracking
 {
-    class N_And_M_4_15652
+    class N_And_M_5_15654
     {
         static int n, m;
         static int[] arr = new int[10];

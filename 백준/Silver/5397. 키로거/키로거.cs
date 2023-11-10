@@ -5,7 +5,7 @@ using System.Text;
 namespace Baekjoon2
 {
     
-    class BOJ_4949
+    class BOJ_5397
     {
         
         static void Main(string[] args)
