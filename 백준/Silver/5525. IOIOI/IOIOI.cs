@@ -5,27 +5,22 @@ int n = int.Parse(Console.ReadLine());
 int m = int.Parse(Console.ReadLine());
 string inputarr = Console.ReadLine();
 
-string baseString = "I";
-for (int i = 0; i < n; i++)
-    baseString += "OI";
-
 int ans = 0;
-bool check;
-for (int i = 0; i <= m - baseString.Length; i++)
+for (int i = 0; i < m - 2; i++)
 {
-	if (inputarr[i] == 'O')
-		continue;
-	check = true;
-	for (int j = 0; j < baseString.Length; j++)
-	{
-		if (baseString[j] != inputarr[i + j])
-		{
-			check = false;
-			break;
-		}
-	}
-	if (check)
-		ans++;
+    int k = 0;
+    if (inputarr[i] == 'O')
+        continue;
+    while (i + 2 < m && inputarr[i + 1] == 'O' && inputarr[i+2] == 'I')
+    {
+        k++;
+        if (k == n)
+        {
+            ans++;
+            k--;
+        }
+        i += 2;
+    }
 }
 
 Console.WriteLine(ans);
