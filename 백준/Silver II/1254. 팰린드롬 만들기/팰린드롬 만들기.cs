@@ -1,4 +1,4 @@
-// BOJ_4307
+// BOJ_1254
 
 
 string str = Console.ReadLine();
