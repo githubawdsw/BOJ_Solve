@@ -13,11 +13,8 @@ vis[start - 1] = true;
 while (q.Count > 0)
 {
     var cur = q.Dequeue();
-    int jump = 0;
-    if (!int.TryParse(stone[cur], out jump))
-    {
-        continue;
-    }
+    int jump = int.Parse(stone[cur]);
+
 
     int left = cur - jump;
     int right = cur + jump;
