@@ -1,41 +1,38 @@
+// BOJ_14248
+
+
 int n = int.Parse(Console.ReadLine());
-string[] stones = Console.ReadLine().Split(' '); 
-int s = int.Parse(Console.ReadLine()) - 1;
+string[] stone = Console.ReadLine().Split(' ');
+int start = int.Parse(Console.ReadLine());
 
-bool[] visited = new bool[n];
-Queue<int> queue = new Queue<int>();
-int count = 0; 
-
-queue.Enqueue(s);
-visited[s] = true;
-count++;
-
-while (queue.Count > 0)
+bool[] vis = new bool[100005];
+Queue<int> q = new Queue<int>();
+q.Enqueue(start - 1);
+int ans = 1;
+vis[start - 1] = true;
+while (q.Count > 0)
 {
-    int current = queue.Dequeue();
-    int jumpDistance = 0;
-
-    if (!int.TryParse(stones[current], out jumpDistance))
+    var cur = q.Dequeue();
+    int jump = 0;
+    if (!int.TryParse(stone[cur], out jump))
     {
         continue;
     }
 
-    jumpDistance = int.Parse(stones[current]);
-    int left = current - jumpDistance;
-    if (left >= 0 && !visited[left])
+    int left = cur - jump;
+    int right = cur + jump;
+    if (left >= 0 && !vis[left])
     {
-        queue.Enqueue(left);
-        visited[left] = true;
-        count++;
+        vis[left] = true;
+        ans++;
+        q.Enqueue(left);
     }
-
-    int right = current + jumpDistance;
-    if (right < n && !visited[right])
+    if(right < n && !vis[right]) 
     {
-        queue.Enqueue(right);
-        visited[right] = true;
-        count++;
+        vis[right] = true;
+        ans++;
+        q.Enqueue(right);
     }
 }
 
-Console.WriteLine(count);
+Console.WriteLine(ans);
