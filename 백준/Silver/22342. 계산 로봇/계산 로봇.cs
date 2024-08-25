@@ -7,13 +7,14 @@ int n = inputnm[1];
 
 int[,] board = new int[2005, 2005];
 int[,] dp = new int[2005, 2005];
+int ans = 0;
 
-for (int i = 1; i < m; i++)
+for (int i = 1; i <= m; i++)
 {
     string inputWeight = Console.ReadLine();
-    for (int j = 1; j < n; j++)
+    for (int j = 1; j <= n; j++)
 	{
-        board[i, j] = inputWeight[j] - '0';
+        board[i, j] = inputWeight[j - 1] - '0';
 	}
 }
 
@@ -27,8 +28,7 @@ for (int j = 1; j <= n; j++)
     }
 }
 
-int ans = 0;
-for (int i = 0; i < m; i++)
+for (int i = 1; i <= m; i++)
 {
     ans = Math.Max(dp[i, n - 1], ans);
 }
