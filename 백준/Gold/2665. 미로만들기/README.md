@@ -4,7 +4,7 @@
 
 ### 성능 요약
 
-메모리: 6284 KB, 시간: 72 ms
+메모리: 5848 KB, 시간: 52 ms
 
 ### 분류
 
@@ -12,7 +12,7 @@
 
 ### 제출 일자
 
-2023년 6월 30일 15:12:32
+2024년 9월 19일 16:48:30
 
 ### 문제 설명
 
@@ -22,7 +22,7 @@
 
 <p>아래 그림은 n=8인 경우의 한 예이다.</p>
 
-<p style="text-align: center;"><img alt="" src="" style="width: 263px; height: 207px; "></p>
+<p style="text-align: center;"><img alt="" src="https://www.acmicpc.net/upload/images/MW747ysuRPRpii4KaUvptRDAx46g.png" style="width: 263px; height: 207px; "></p>
 
 <p>위 그림에서는 두 개의 검은 방(예를 들어 (4,4)의 방과 (7,8)의 방)을 흰 방으로 바꾸면, 시작방에서 끝방으로 갈 수 있지만, 어느 검은 방 하나만을 흰 방으로 바꾸어서는 불가능하다. 검은 방에서 흰 방으로 바꾸어야 할 최소의 수를 구하는 프로그램을 작성하시오.</p>
 
